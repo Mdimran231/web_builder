@@ -1,0 +1,143 @@
+css
+/* ================= NAVBAR ================= */
+
+.nav{
+  width:100%;
+  height:70px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 40px;
+
+  position:sticky;
+  top:0;
+  z-index:100;
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  background:rgba(255,255,255,0.05);
+
+  border-bottom:1px solid var(--color-border);
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* ================= LOGO ================= */
+
+.logo h2{
+  font-size:26px;
+  font-weight:700;
+
+  background:linear-gradient(135deg,#a855f7,#7c3aed);
+  -webkit-background-clip:text;
+  color:transparent;
+
+  letter-spacing:1px;
+
+  transition:0.3s;
+}
+
+.logo h2:hover{
+  transform:scale(1.05);
+  text-shadow:0 0 20px rgba(168,85,247,0.8);
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+/* ================= ICON BUTTON ================= */
+
+.icon{
+  width:40px;
+  height:40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:18px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid var(--color-border);
+
+  backdrop-filter:blur(10px);
+
+  color:var(--color-text);
+
+  transition:0.25s;
+}
+
+/* Hover */
+
+.icon:hover{
+  background:linear-gradient(135deg,#9333ea,#7e22ce);
+
+  color:white;
+
+  transform:translateY(-2px) scale(1.05);
+
+  box-shadow:0 0 15px rgba(147,51,234,0.7);
+}
+
+/* ================= LIGHT MODE ================= */
+
+.light .nav{
+  background:rgba(255,255,255,0.7);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.light .icon{
+  background:rgba(0,0,0,0.05);
+  color:#111;
+}
+
+.light .icon:hover{
+  background:linear-gradient(135deg,#9333ea,#7e22ce);
+  color:white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .nav{
+    padding:0 20px;
+  }
+
+  .logo h2{
+    font-size:22px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .nav{
+    height:auto;
+    padding:10px 15px;
+  }
+
+  .nav-right{
+    gap:10px;
+  }
+
+  .icon{
+    width:36px;
+    height:36px;
+    font-size:16px;
+  }
+
+}
