@@ -239,10 +239,7 @@ value={code}
 
 {/* Modal */}
 {/* Modal / Open in Full Preview */}
-// 1. State add karein (top par)
-const [previewSize, setPreviewSize] = useState("100%"); // Default full width
 
-// 2. Modal ke andar icons ko update karein
 {isInNewTab && (
   <div className="modelCon">
     {/* modelBox ki width dynamic hogi */}
